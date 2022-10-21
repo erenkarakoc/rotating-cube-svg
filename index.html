@@ -8,9 +8,18 @@
   <title>Rotating Cube SVG</title>
 </head>
 
+<style>
+  body {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+  }
+</style>
+
 <body>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-    <title>Rotating Cube SVG</title>
+  <svg xmlns="http://www.w3.org/2000/svg" height="144" width="144" viewBox="0 0 200 200">
     <defs id="animation_styles">
       <style type="text/css">
         @keyframes rotate360 {
@@ -44,18 +53,9 @@
         }
 
         .rotate_vert {
-          animation: rotate360 10s linear infinite;
-          -moz-animation: rotate360 10s linear infinite;
-          -webkit-animation: rotate360 10s linear infinite;
-        }
-
-        .rotate_horiz {
-          animation: rotate360 10s linear infinite;
-          transform-origin: 50% 50%;
-          -moz-animation: rotate360 10s linear infinite;
-          -moz-transform-origin: 50% 50%;
-          -webkit-animation: rotate360 10s linear infinite;
-          -webkit-transform-origin: 50% 50%;
+          animation: rotate360 3s linear infinite;
+          -moz-animation: rotate360 3s linear infinite;
+          -webkit-animation: rotate360 3s linear infinite;
         }
 
         .object3D {
@@ -82,7 +82,7 @@
         d="M -50 -30 L -50 30 c 0 14.1421 14.1421 20 20 20 L 30 50 c 14.1421 0 20 -14.1421 20 -20 L 50 -30 c 0 -14.1421 -14.1421 -20 -20 -20 L -30 -50 c -14.1421 0 -20 14.1421 -20 20 z"
         id="slice5" transform="rotate (-25)" />
     </defs>
-    <g class="rotate_horiz" id="object3D">
+    <g id="object3D">
       <g class="object3D" transform="translate (100 100) scale (1 0.34202)">
         <g id="layer1" transform="translate (0 130.505)">
           <use class="rotate_vert" xlink:href="#slice1" />
